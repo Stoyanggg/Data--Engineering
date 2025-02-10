@@ -1,11 +1,11 @@
-**Data Pipeline for Customer, Product, Orders and Order_Items Data Processing using Delta Lake & PySpark**
+**Data Pipeline for Customers, Products, Orders and Order_Items Data Processing using Delta Lake & PySpark**
 ## **Project Overview**
-This project implements an **ETL pipeline** using **PySpark** and **Databricks** to process customer, product, orders and order_items. The pipeline reads streaming data from **AWS (S3)**, processes it in multiple stages (**Bronze, Silver, and Gold layers**), and stores the transformed data into Delta tables for further analytics.
+This project implements an **ETL pipeline** using **PySpark** and **Databricks** to process customers, products, orders and order_items. The pipeline reads streaming data from **AWS (S3)**, processes it in multiple stages (**Bronze, Silver, and Gold layers**), and stores the transformed data into Delta tables for further analytics.
 
 ## **Architecture**
 The project follows a **Medallion Architecture (Bronze, Silver, Gold)**:
 1. **Bronze Layer (Raw Data)**
-   - Ingests raw customer, product, orders and order_items.
+   - Ingests raw customers, products, orders, and order_items.
    - Stores data in a **Delta table** without transformations.
    - Each batch is assigned a unique `batch_id` and ingestion timestamp.
 
